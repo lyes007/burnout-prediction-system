@@ -28,6 +28,9 @@ export interface BurnoutPrediction {
 }
 
 export interface EmployeeWithPrediction extends Employee {
+  burn_rate?: number;
+  risk_level?: RiskLevel;
+  prediction_date?: Date | string;
   prediction?: BurnoutPrediction;
 }
 
@@ -45,6 +48,7 @@ export interface AnalyticsOverview {
 }
 
 export interface PredictionRequest {
+  employee_id?: string;
   gender: Gender;
   company_type: CompanyType;
   wfh_setup_available: boolean;

@@ -68,7 +68,7 @@ async function importDataset(limit: number = 100) {
     const csvContent = fs.readFileSync(csvPath, 'utf-8');
 
     // Parse CSV
-    const records: CSVRow[] = parse(csvContent, {
+    const records: CSVRow[] = csv.parse(csvContent, {
       columns: true,
       skip_empty_lines: true,
       trim: true,
