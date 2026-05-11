@@ -50,7 +50,7 @@ export function EmployeeCard({ employee }: EmployeeCardProps) {
           {employee.prediction && (
             <div className="pt-2 border-t">
               <div className="flex justify-between items-center">
-                <span className="text-muted-foreground">Burn Rate:</span>
+                <span className="text-muted-foreground">Burn Rate :</span>
                 <span className="font-semibold">
                   {(employee.prediction.burn_rate * 100).toFixed(1)}%
                 </span>
